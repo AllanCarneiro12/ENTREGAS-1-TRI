@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    background-color: rgb(34, 34, 34);
+}
+
+@keyframes piscadela1 {
+    50% {
+        background-color: rgb(255, 255, 255);
+        clip-path: circle(38.0% at 100% 100%);
+    }
+}
+
+@keyframes piscadela2 {
+    50% {
+        background-color: rgb(255, 255, 255);
+        clip-path: circle(38.0% at 0 100%);
+    }
+}
+
+@keyframes piscadela3 {
+    50% {
+        background-color: rgb(255, 255, 255);
+        clip-path: circle(38.0% at 100% 0);
+    }
+}
+
+@keyframes piscadela4 {
+    50% {
+        background-color: rgb(255, 255, 255);
+        clip-path: circle(38.0% at 0 0);
+    }
+}
+
+@keyframes contagem {
+    0% {
+        clip-path: circle(70.0% at 50% 50%);
+    }
+    100%{
+        clip-path: circle(20.0% at 50% 50%);
+        opacity: 0.2;
+    }
+}
+
+@keyframes derrota {
+    0% {
+        clip-path: circle(20.0% at 50% 50%);
+        background-color: #000000c5;
+    }
+    100% {
+        clip-path: circle(40.0% at 50% 50%);
+        background-color: #942e2ec5;
+    }
+}
+
+@keyframes reset {
+    0% {
+        clip-path: circle(40.0% at 50% 50%);
+        background-color: #942e2ec5;
+    }
+    100%{
+        clip-path: circle(70.0% at 50% 50%);
+        background-color: #000000;
+    }
+    
+}
+
+main {
+    border: 0px solid black;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(34, 34, 34);
+    /* clip-path: circle(20.0% at 50% 50%); */
+}
+
+main > div {
+    border: 0px solid black;
+    width: 50%;
+    flex: none;
+}
+
+main > div:nth-child(1) {
+    background-color: blue;
+    clip-path: circle(40.0% at 100% 100%);
+}    
+
+main > div:nth-child(2) {
+    background-color: red;
+    clip-path: circle(40.0% at 0 100%);
+}    
+
+main > div:nth-child(3) {
+    background-color: green;
+    clip-path: circle(40.0% at 100% 0);
+}    
+
+main > div:nth-child(4) {
+    background-color: yellow;
+    clip-path: circle(40.0% at 0 0);
+}    
+
+main > div:nth-child(1).animate {
+    animation: piscadela1 .2s ease-in-out;
+}
+
+main > div:nth-child(2).animate {
+    animation: piscadela2 .2s ease-in-out;
+}
+
+main > div:nth-child(3).animate {
+    animation: piscadela3 .2s ease-in-out;
+}
+
+main > div:nth-child(4).animate {
+    animation: piscadela4 .2s ease-in-out;
+}
+
+body > div.contagem {
+    animation: contagem 3s ease-in-out;
+}
+
+body > div.derrota {
+    animation: derrota 0.5s ease;
+    clip-path: circle(40.0% at 50% 50%);
+    background-color: #942e2ec5;
+}
+body > div.reset {
+    animation: reset 1s ease-in;
+    clip-path: circle(70.0% at 50% 50%);
+    background-color: #000000c5;
+}
+
+div.start {
+    position:absolute;
+    clip-path: circle(70.0% at 50% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    padding: 5vmin;
+    user-select: none;
+    /* background-color: #000000c5; */
+    background-color: #000000;
+    color:white;
+    font-size: 12vmin;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+div.pontuacao {
+    font-size: 10vmin;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5vmin;
+    user-select: none;
+    background-color: #00000099;
+    color: white;
+    clip-path: circle(25.0% at 0 0);
+}
