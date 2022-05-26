@@ -1,14 +1,15 @@
-/* https://flatuicolors.com/palette/de */
+/* https://colorhunt.co/palette/2f8f9d3bacb682dbd8b3e8e5 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
     font-family: 'Roboto', sans-serif;
-    --ascent-color: #a55eea;
-    --background-color: #F8F8F8;
+    --ascent-color: #3BACB6;
+    --background-color: #B3E8E5;
 }
 
 * {
     box-sizing: border-box;
+    top: 0;
 }
 
 html,
@@ -20,9 +21,18 @@ body {
 }
 
 header {
-    padding: .25em;
+    padding: 0em;
     background-color: var(--ascent-color);
+    align-content: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
+/* 
+header > span {
+    text-align: center;
+    align-content: center;
+} */
 
 main {
     display: flex;
@@ -31,11 +41,22 @@ main {
     flex-direction: column;
 }
 
+div.action-bar {
+    height: 15px;
+}
+
+div.action-bar > * {
+    position: relative;
+    top: 0;
+    border: 0;
+    padding: 0;
+}
+
 .modal {
-    border: 1px solid black; /* todo */
+    /* border: 1px solid black; todo */
     background-color: white; /* todo */
     box-shadow: 0px 0px 23px -15px #000000DD;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 1em;
     margin: 2em;
     position: relative;
@@ -45,12 +66,12 @@ main {
     position: absolute;
     height: 2em;
     width: 2em;
-    right: -.5em;
-    top: -.5em;   
-    border-radius: 50%;
-    border: 1px solid black;
-    color: red;
-    background-color: white;
+    right: 0em;
+    top: 0em;   
+    /* border-radius: 50%; */
+    border: 0px solid black;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 0, 0, 0.514);
     cursor: pointer;
 }
 
@@ -58,7 +79,7 @@ main {
     display: block;
     border-bottom: 1px solid black;
     margin-bottom: .5em;
-    padding-top: .5em;
+    padding-top: 1em;
     margin: 0 0 .25em 0;
     padding: 0;
 }
@@ -73,6 +94,8 @@ main {
 
 .modal form > div > input {
     width: 100%;
+    border-width: 0;
+    background-color: rgb(231, 231, 231);
 }
 
 .modal div.action {
